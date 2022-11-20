@@ -1,13 +1,24 @@
 # hello_psg.py
+
+import PySimpleGUI as sg
 import urllib.parse
 import requests
 
+sg.theme('SandyBeach')     
 main_api = "https://www.mapquestapi.com/directions/v2/route?"
 key = "XAskX1IiTe2AebXN5AATdetNfKTx2ABG"
 # Very basic window.
 # Return values using
 # automatic-numbered keys
-
+layout = [
+    
+    [sg.Text('Please enter the information required')],
+    [sg.Text('Starting Location', size =(15, 1)), sg.Input(key='orig')],
+    [sg.Text('Destination', size =(15, 1)), sg.InputText(key='dest')],
+    [sg.Button('Submit'), sg.Cancel()]
+    
+]
+window = sg.Window('MAPQUEST PROGRAM by WANtap', layout)
 def main(values):
     info = "Submitted"
     space1 = "\n"
