@@ -11,10 +11,12 @@ key = "XAskX1IiTe2AebXN5AATdetNfKTx2ABG"
 # Return values using
 # automatic-numbered keys
 layout = [
+    
     [sg.Text('Please enter the information required')],
     [sg.Text('Starting Location', size =(15, 1)), sg.Input(key='orig')],
     [sg.Text('Destination', size =(15, 1)), sg.InputText(key='dest')],
     [sg.Button('Submit'), sg.Cancel()]
+    
 ]
 window = sg.Window('MAPQUEST PROGRAM by WANtap', layout)
 def main(values):
